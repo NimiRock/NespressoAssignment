@@ -1,7 +1,7 @@
 // Setting up the server
 const http = require("http");
 const { getReqData } = require("./utils");
-const { Query } = require("./dbconfig");
+const { Query } = require("./dbConfig");
 const { verifyToken } = require("./verifyToken");
 const jwt = require("jsonwebtoken");
 

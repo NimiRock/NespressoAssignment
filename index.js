@@ -8,8 +8,12 @@ const jwt = require("jsonwebtoken");
 const PORT = process.env.PORT || 1000;
 
 const server = http.createServer(async (req, res) => {
+	if (req.url === "/nespresso/" && req.method === "GET") {
+		res.writeHead(200, { "Content-Type": "application/json" });
+		res.end("Welcome to Nespresso customers API!");
+	}
 	// /nespresso/get-token : POST - username: "admin", password: "123456"
-	if (req.url === "/nespresso/get-token" && req.method === "POST") {
+	else if (req.url === "/nespresso/get-token" && req.method === "POST") {
 		/* Defining the needed data
         verify that there is no missing data
         verify the username and password

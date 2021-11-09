@@ -1,5 +1,12 @@
 const mysql = require("mysql");
 
+// const connection = mysql.createConnection({
+// 	host: "localhost",
+// 	user: "root",
+// 	password: "",
+// 	database: "nespressocustomers",
+// });
+
 const connection = mysql.createConnection({
 	host: "us-cdbr-east-04.cleardb.com",
 	user: "b9f04cf6d85a61",

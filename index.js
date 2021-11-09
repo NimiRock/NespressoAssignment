@@ -130,7 +130,7 @@ const server = http.createServer(async (req, res) => {
 		}
 	}
 
-	// /nespresso/edit-customer/:customer_id : UPDATE
+	// /nespresso/edit-customer/:customer_id : PUT
 	else if (req.url.match(/\/nespresso\/edit-customer\/([0-9]+)/) && req.method === "PUT") {
 		/* verify token
         get customer_id from url

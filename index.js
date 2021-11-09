@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const PORT = process.env.PORT || 1000;
 
 const server = http.createServer(async (req, res) => {
-	if (req.url === "/nespresso/" && req.method === "GET") {
+	if (req.url === "/" && req.method === "GET") {
 		res.writeHead(200, { "Content-Type": "application/json" });
 		res.end("Welcome to Nespresso customers API!");
 	}
